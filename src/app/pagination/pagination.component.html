@@ -1,0 +1,15 @@
+<div class="pagination">
+    <div class="btn" (click)="prev()">Prev</div>
+    <div>
+        <ul>
+            <li class="btn" (click)="getCurrentPage(i)" *ngFor="let i of pageNumArray" [class.active]="i === currentPage">{{i}}</li>
+        </ul>
+    </div>
+    <div class="btn" (click)="next()">Next</div>
+    <select class="select-num" [(ngModel)]="currentCount">
+        <!-- <option value="count" *ngFor="let count of countArray">{{count}}</option> -->
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+</div>

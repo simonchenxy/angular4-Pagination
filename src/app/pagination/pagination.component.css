@@ -1,0 +1,39 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.pagination > div{
+    display: inline-block;
+}
+.pagination .btn{
+    width: 50px;
+    height: 30px;
+    background: #3e76ec;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+}
+.pagination > div + div,
+.pagination .btn + .btn,
+.select-num{
+    margin-left: 5px;
+}
+.pagination ul{
+    margin: 0;
+    padding: 0;
+}
+.pagination ul::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.pagination ul li{
+    list-style: none;
+    float: left;
+}
+.active{
+    background: #f15c5c !important;
+}

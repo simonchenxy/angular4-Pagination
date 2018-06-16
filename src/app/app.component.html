@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let data of dataShow">name = {{data.name}}</li>
+</ul>
+
+<app-pagination [leng]="leng" (pageCurrent)="getCurrentPage($event)" (countCurrent)="getCurrentCount($event)"></app-pagination>
