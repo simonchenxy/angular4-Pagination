@@ -18,7 +18,7 @@ export class AppComponent implements DoCheck {
     console.log(this.leng);
   }
   ngDoCheck() {
-    if (this.currentPage !== this.oldPage || this.currentCount !== this.oldCount) {
+    if (this.currentCount !== this.oldCount || this.currentPage !== this.oldPage) {
       this.dataShow = [];
       const currentPage = this.currentPage - 1;
       const pages = this.currentCount;
@@ -29,12 +29,10 @@ export class AppComponent implements DoCheck {
         }
         this.dataShow.push(this.datas[show]);
       }
-      this.oldPage = this.currentPage;
-      this.oldCount = this.currentCount;
     }
+    this.oldPage = this.currentPage;
+    this.oldCount = this.currentCount;
   }
-
-
   getCurrentPage(page: number) {
     this.currentPage = page;
   }

@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, DoCheck, OnChanges, EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnInit, DoCheck, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-pagination',
@@ -6,7 +6,7 @@ import { Component, Input, Output, OnInit, DoCheck, OnChanges, EventEmitter } fr
     styleUrls: ['./pagination.component.css']
 })
 
-export class PaginationComponent implements OnInit, OnChanges, DoCheck {
+export class PaginationComponent implements OnInit, DoCheck {
     currentPage = 1;
     currentCount = 5;
     oldCount: number;
@@ -22,9 +22,6 @@ export class PaginationComponent implements OnInit, OnChanges, DoCheck {
         this.setPageNum();
         this.emitCurrentPage();
         this.emitCurrentCount();
-    }
-    ngOnChanges() {
-
     }
     ngDoCheck() {
         if (this.currentCount !== this.oldCount) {
@@ -110,5 +107,4 @@ export class PaginationComponent implements OnInit, OnChanges, DoCheck {
     emitCurrentCount() {
         this.countCurrent.emit(this.currentCount);
     }
-
 }
