@@ -21,6 +21,13 @@
 .select-num{
     margin-left: 5px;
 }
+.select-num{
+    height: 30px;
+    width: 50px;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid #696969;
+}
 .pagination ul{
     margin: 0;
     padding: 0;
