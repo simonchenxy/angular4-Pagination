@@ -28,7 +28,6 @@ export class PaginationComponent implements OnInit, DoCheck {
             this.setPageNum();
             this.currentPage = 1;
             this.emitCurrentPage();
-            this.emitCurrentCount();
             this.oldCount = this.currentCount;
         }
     }
@@ -46,6 +45,10 @@ export class PaginationComponent implements OnInit, DoCheck {
         } else {
             this.pageNumArray = this.pageFullNumArray;
         }
+    }
+    getCurrentCount() {
+        console.log('aaaaaa');
+        this.emitCurrentCount();
     }
     getCurrentPage(page: number) {
         if (page > this.currentPage && this.pageNumArray.indexOf(page) > 2) {
